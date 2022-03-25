@@ -8,8 +8,8 @@ request("http://reddit.com/r/popular/.json", (err, res, body) => {
     if (err) console.log(err);
 
     JSON.parse(body).data.children.forEach(item => {
-        // console.log(item.data.title)
-        fs.appendFileSync(filePath, item.data.title + "\n");
+        console.log(item.data.title)
+        // fs.appendFileSync(filePath, item.data.title + "\n");
     })
     // fs.writeFile(filePath, res.body, err => {
     //     if (err) console.log(err);
